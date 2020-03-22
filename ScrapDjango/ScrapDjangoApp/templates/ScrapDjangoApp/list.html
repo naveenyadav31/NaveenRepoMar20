@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    </head>
+    <body>
+        <div class="header">
+            <h1 >COMPANY DATA</h1>
+        </div>
+        <div class="content">
+            {% for company_detail in company_details %}
+            <h1>Company: {{company_detail.Business_Name}}</h1>
+            <h3>Website: {{company_detail.Website}}</h3>
+            <h2>Category: {{company_detail.Category}}</h2>
+            <h2>City: {{company_detail.City}}</h2>
+            {% endfor %}
+        </div>
+    </body>
+</html>
